@@ -13,17 +13,15 @@ Add `GranularBrowserModule` right after `BrowserModule`
 
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 // add this line
 import { GranulaBrowserModule } from '@granulajs/platform-browser-granula';
-import { SmallComponent } from './small/small.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SmallComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
