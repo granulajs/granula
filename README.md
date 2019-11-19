@@ -1,7 +1,7 @@
 # Granula
 
 Is a lightweight alternative to Angular (like Preact for React).
-Right now on `State 0`.
+Right now on `State 0`. Not stable, but ready for production
 
 ## QuickStart
 
@@ -40,12 +40,18 @@ export class AppModule { }
 
 ### Stage 0
 
+- [x] JIT Runtime
+- [x] AOT Runtime
 - [x] Simple version of Garbage Change Detection
 - [ ] Fix for HttpParams encoding (https://github.com/angular/angular/issues/18261)
-- [ ] @granula/router (smaller/faster)
 
 ### Stage 1
 
 - [ ] Full version of Garbage Change Detection
 - [ ] Dumb template parser (using DOM parser)
 - [ ] @granula/cli
+- [ ] @granula/router (smaller/faster)
+
+### Stage 2
+
+- [ ] Stable release
