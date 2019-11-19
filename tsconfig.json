@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@granulajs/platform-browser-granula": [
+        "dist/granulajs/platform-browser-granula"
+      ],
+      "@granulajs/platform-browser-granula/*": [
+        "dist/granulajs/platform-browser-granula/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

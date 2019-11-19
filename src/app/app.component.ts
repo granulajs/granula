@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'granula';
+  title = 'ng-custom-platform';
+  list = [];
+
+  constructor() {
+    this.list = new Array(4000).fill(0);
+  }
 }

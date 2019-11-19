@@ -1,27 +1,51 @@
 # Granula
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+Is a lightweight alternative to Angular (like Preact for React).
+Right now on `State 0`.
 
-## Development server
+## QuickStart
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm i -S @granulajs/platform-browser-granula
+```
 
-## Code scaffolding
+Add `GranularBrowserModule` right after `BrowserModule`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, ApplicationRef } from '@angular/core';
 
-## Build
+import { AppComponent } from './app.component';
+// add this line
+import { GranulaBrowserModule } from '@granulajs/platform-browser-granula';
+import { SmallComponent } from './small/small.component';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  declarations: [
+    AppComponent,
+    SmallComponent
+  ],
+  imports: [
+    BrowserModule,
+    // and this line
+    GranulaBrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running unit tests
+## Roadmap
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Stage 0
 
-## Running end-to-end tests
+- [x] Simple version of Garbage Change Detection
+- [ ] Fix for HttpParams encoding (https://github.com/angular/angular/issues/18261)
+- [ ] @granula/router (smaller/faster)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Stage 1
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [ ] Full version of Garbage Change Detection
+- [ ] Dumb template parser (using DOM parser)
+- [ ] @granula/cli

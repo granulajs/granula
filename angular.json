@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "@granulajs/platform-browser-granula": {
+      "projectType": "library",
+      "root": "projects/granulajs/platform-browser-granula",
+      "sourceRoot": "projects/granulajs/platform-browser-granula/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/granulajs/platform-browser-granula/tsconfig.lib.json",
+            "project": "projects/granulajs/platform-browser-granula/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/granulajs/platform-browser-granula/src/test.ts",
+            "tsConfig": "projects/granulajs/platform-browser-granula/tsconfig.spec.json",
+            "karmaConfig": "projects/granulajs/platform-browser-granula/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/granulajs/platform-browser-granula/tsconfig.lib.json",
+              "projects/granulajs/platform-browser-granula/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "granula"
 }
